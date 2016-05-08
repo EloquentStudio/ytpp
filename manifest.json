@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "YTPP",
+  "version": "0.0",
+
+  "description": "YTPP: YouTube Play/Pause without switching tabs",
+  "author": {"name": "spidergears", "twitter_handle": "spider_gears", "github": "http://github.com/spidergears"},  
+  "browser_action": { "default_icon": "icon.png", "default_title": "YTPP"},
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "background": { "scripts": ["ytpp_background_script.js"]},
+  "content_scripts": [ {"matches": ["http://www.youtube.com/*", "https://www.youtube.com/*"], "js": ["ytpp_content_script.js"]} ]
+}
