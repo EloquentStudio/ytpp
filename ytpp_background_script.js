@@ -1,5 +1,4 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
-  console.log("Sending Message")
   chrome.tabs.query({}, function(tabs){
     for (var i=0; i < tabs.length; i++) {
       if (/https?:\/\/www\.youtube\.com/.test(tabs[i].url)) {
@@ -7,5 +6,4 @@ chrome.browserAction.onClicked.addListener(function(tab) {
         }
     }
   })
-  console.log("Message Sent.")
 });
